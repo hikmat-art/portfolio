@@ -5,114 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hikmat Ullah | Cloud Architect</title>
   <style>
-    :root{--bg:#f7f9fc;--card:#fff;--accent:#0066ff;--text:#111}
+    :root{--bg:#ffffff;--card:#f7f9fc;--accent:#0066ff;--text:#111}
     *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
-    body{background:var(--bg);color:var(--text);line-height:1.6;padding:2rem}
-    header{text-align:center;margin-bottom:3rem}
-    .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem}
-    h1{font-size:2.2rem;margin-bottom:.3rem}
-    .social a{margin:0 .5rem;color:var(--accent);text-decoration:none;font-weight:500}
-    section{margin-bottom:2.5rem}
-    h2{margin-bottom:.7rem;font-size:1.4rem}
-    ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem}
-    li{background:var(--card);padding:.4rem .8rem;border-radius:4px;font-size:.9rem;box-shadow:0 1px 2px rgba(0,0,0,.05)}
-    .projects-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08);display:flex;flex-direction:column}
-    .card img{width:100%;height:150px;object-fit:cover;background:#eef2ff}
-    .card h3{font-size:1.1rem;margin:.7rem}
-    .card p{padding:0 .7rem;font-size:.9rem;flex:1}
-    .tags{padding:.5rem .7rem;display:flex;flex-wrap:wrap;gap:.3rem}
-    .tags span{background:#eef2ff;color:var(--accent);padding:.2rem .5rem;border-radius:3px;font-size:.75rem}
-    .btn{background:var(--accent);color:#fff;padding:.6rem 1rem;margin:.7rem auto 1rem auto;text-align:center;text-decoration:none;border-radius:4px;width:90%;transition:.2s}
-    .btn:hover{background:#0053d9}
-    footer{text-align:center;font-size:.8rem;margin-top:3rem;color:#777}
-    @media(max-width:600px){body{padding:1rem}h1{font-size:1.7rem}}
+    body{background:var(--bg);color:var(--text);line-height:1.6;display:flex;justify-content:center;padding:2rem 1rem}
+    .cv{width:100%;max-width:800px;display:flex;flex-direction:column;gap:1.5rem}
+    header{display:flex;gap:1.5rem;align-items:flex-start}
+    .photo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid var(--accent)}
+    .name-contacts h1{font-size:2rem;margin-bottom:.3rem}
+    .contacts{display:flex;flex-wrap:wrap;gap:.8rem;font-size:.9rem}
+    .contacts a{color:var(--accent);text-decoration:none;font-weight:500}
+    .intro{font-size:.95rem;margin-top:.5rem}
+    .side-panel{display:grid;gap:1.2rem}
+    .side-panel section{background:var(--card);padding:1rem;border-radius:6px}
+    .side-panel h2{font-size:1.1rem;margin-bottom:.4rem}
+    .main-panel{display:flex;flex-direction:column;gap:1.5rem}
+    .skills ul,.tags ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+    .skills li,.tags li{background:#eef2ff;color:var(--accent);padding:.3rem .6rem;border-radius:4px;font-size:.8rem}
+    .projects-grid{display:grid;gap:1.2rem}
+    .card{background:var(--card);border-radius:6px;padding:1rem;display:flex;flex-direction:column;gap:.5rem}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:4px;background:#eef2ff}
+    .card h3{font-size:1.05rem}
+    .card p{font-size:.85rem}
+    .tools{font-size:.75rem;color:#555}
+    .btn{align-self:start;background:var(--accent);color:#fff;padding:.4rem .9rem;border-radius:4px;text-decoration:none;font-size:.8rem;margin-top:.3rem}
+    footer{text-align:center;font-size:.75rem;margin-top:2rem;color:#777}
+    @media(max-width:600px){header{flex-direction:column;align-items:center;text-align:center}}
   </style>
 </head>
 <body>
-  <header>
-    <img src="avatar.jpg" alt="avatar" class="avatar"/>
-    <h1>Hikmat Ullah</h1>
-    <p>Cloud Architect | Network & Security</p>
-    <div class="social">
-      <a href="https://github.com/Hikmat-art" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/Hikmat Ullah" target="_blank">LinkedIn</a>
-      <a href="mailto:itcombat97@gmail.com">Email</a>
-      <a href="tel:+923028888953">+92 302 8888953</a>
+  <div class="cv">
+    <!-- TOP BAR : photo + name + contacts -->
+    <header>
+      <img src="avatar.jpg" alt="Hikmat Ullah" class="photo">
+      <div class="name-contacts">
+        <h1>Hikmat Ullah</h1>
+        <div class="contacts">
+          <a href="https://github.com/hikmat-art" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/hikmat-ullah-55150a14a" target="_blank">LinkedIn</a>
+          <a href="mailto:itcombat97@gmail.com">Email</a>
+          <a href="https://wa.me/923028888953" target="_blank">WhatsApp</a>
+        </div>
+        <p class="intro">
+          Cloud & Network Architect with 5+ years designing secure, scalable multi-cloud solutions.
+          Specialist in AWS, Azure, Linux networking and infrastructure-as-code.
+        </p>
+      </div>
+    </header>
+
+    <!-- TWO COLUMNS : right-side quick info -->
+    <div class="side-panel">
+      <section id="education">
+        <h2>Education</h2>
+        <p>Bachelor of Computer Science<br>Gomal University (2016)</p>
+      </section>
+      <section id="certs">
+        <h2>Certifications</h2>
+        <ul>
+          <li>CCNA – Cisco Certified Network Associate</li>
+          <li>MCSA – Microsoft Certified Solutions Associate</li>
+          <li>CompTIA Security+</li>
+        </ul>
+      </section>
+      <section id="languages">
+        <h2>Languages</h2>
+        <ul>
+          <li>Pashto (Native)</li>
+          <li>Urdu (Bilingual)</li>
+          <li>English (Fluent)</li>
+        </ul>
+      </section>
     </div>
-  </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>AWS</li><li>Azure</li><li>Terraform</li><li>Python</li>
-      <li>VPC Design</li><li>IoT Security</li><li>Landing Zone</li>
-      <li>Multi-cloud</li><li>RAG</li><li>Micro-services</li>
-    </ul>
-  </section>
+    <!-- MAIN COLUMN : skills + all projects -->
+    <div class="main-panel">
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>Linux</li><li>IP Configuration</li><li>AWS</li><li>Azure</li>
+          <li>Terraform</li><li>Python</li><li>VPC Design</li><li>IoT Security</li>
+          <li>Landing Zone</li><li>Multi-cloud</li><li>RAG</li><li>Micro-services</li>
+        </ul>
+      </section>
 
-  <section id="certs">
-    <h2>Certifications</h2>
-    <ul>
-      <li>CCNA Cisco certified Network Associate</li>
-      <li>MCSA Microsoft Certified Solutions Associate</li>
-      <li>CompTIA Security+</li>
-    </ul>
-  </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <!-- 01 Lock-Down VPC -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Networking/3-tier-vpc.png" alt="Lock-Down VPC">
+            <h3>Lock-Down VPC</h3>
+            <p>3-tier VPC with GuardDuty, Flow-Logs, CIS hardening & budget guard.</p>
+            <div class="tools"><strong>Tools:</strong> AWS CDK, GuardDuty, Config, Budgets</div>
+            <div class="tags"><ul><li>VPC</li><li>Security</li><li>CDK</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/01-lockdown-vpc" target="_blank">Explore Project →</a>
+          </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>Bachelor of Computer Science – Gomal University (2016)</li>
-    </ul>
-  </section>
+          <!-- 02 Zero-Trust IoT -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/IoT/IoT-core-private.png" alt="Zero-Trust IoT">
+            <h3>Zero-Trust IoT Gateway</h3>
+            <p>10 k MQTT devices, micro-segmented, ISO-27001 controls.</p>
+            <div class="tools"><strong>Tools:</strong> IoT Core, VPC Lattice, Lambda, DynamoDB</div>
+            <div class="tags"><ul><li>IoT</li><li>VPC Lattice</li><li>X.509</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/02-zero-trust-iot" target="_blank">Explore Project →</a>
+          </div>
 
-  <section id="languages">
-    <h2>Languages</h2>
-    <ul>
-      <li>Pashtu (Native)</li>
-      <li>English (Fluent)</li>
-      <li>Urdu (Bilingual)</li>
-    </ul>
-  </section>
+          <!-- 03 Serverless PDF -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Serverless/Lambda-S3-API.png" alt="Serverless PDF">
+            <h3>Serverless PDF Converter</h3>
+            <p>Drag-and-drop web app, $0.01 per doc, auto-scales to 5 k/day.</p>
+            <div class="tools"><strong>Tools:</strong> Lambda, S3, React, CloudFront</div>
+            <div class="tags"><ul><li>Lambda</li><li>React</li><li>S3</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/03-serverless-pdf" target="_blank">Explore Project →</a>
+          </div>
 
-  <section id="experience">
-    <h2>Experience & Projects</h2>
-    <div class="projects-grid">
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Networking/3-tier-vpc.png" alt="Lock-Down VPC">
-        <h3>Lock-Down VPC</h3>
-        <p>3-tier VPC with GuardDuty, Flow-Logs, CIS hardening & budget guard.</p>
-        <div class="tags"><span>VPC</span><span>Security</span><span>CDK</span></div>
-        <a class="btn" href="https://github.com/YOUR-github-username/01-lockdown-vpc" target="_blank">Explore Project →</a>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/IoT/IoT-core-private.png" alt="Zero-Trust IoT">
-        <h3>Zero-Trust IoT Gateway</h3>
-        <p>10 k MQTT devices, micro-segmented, ISO-27001 controls.</p>
-        <div class="tags"><span>IoT</span><span>VPC Lattice</span><span>X.509</span></div>
-        <a class="btn" href="https://github.com/YOUR-github-username/02-zero-trust-iot" target="_blank">Explore Project →</a>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Serverless/Lambda-S3-API.png" alt="Serverless PDF">
-        <h3>Serverless PDF Converter</h3>
-        <p>Drag-and-drop web app, $0.01 per doc, auto-scales to 5 k/day.</p>
-        <div class="tags"><span>Lambda</span><span>React</span><span>S3</span></div>
-        <a class="btn" href="https://github.com/YOUR-github-username/03-serverless-pdf" target="_blank">Explore Project →</a>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Mobile/AppSync-Cognito.png" alt="Pet-Adoption SaaS">
-        <h3>Pet-Adoption SaaS</h3>
-        <p>Multi-tenant GraphQL backend with Stripe billing in 3 weeks.</p>
-        <div class="tags"><span>AppSync</span><span>Cognito</span><span>Stripe</span></div>
-        <a class="btn" href="https://github.com/YOUR-github-username/04-pet-adoption-saas" target="_blank">Explore Project →</a>
-      </div>
+          <!-- 04 Pet-Adoption SaaS -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Mobile/AppSync-Cognito.png" alt="Pet-Adoption SaaS">
+            <h3>Pet-Adoption SaaS</h3>
+            <p>Multi-tenant GraphQL backend with Stripe billing in 3 weeks.</p>
+            <div class="tools"><strong>Tools:</strong> AppSync, Cognito, DynamoDB, Stripe</div>
+            <div class="tags"><ul><li>AppSync</li><li>Cognito</li><li>Stripe</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/04-pet-adoption-saas" target="_blank">Explore Project →</a>
+          </div>
+
+          <!-- 05 Landing Zone -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/landing-zone-accelerator-on-aws/main/docs/static/img/lza-arch.png" alt="AWS Landing Zone">
+            <h3>AWS Landing Zone</h3>
+            <p>Control-Tower + LZA baseline, 5 OUs, 30+ services, CIS 1.4.</p>
+            <div class="tools"><strong>Tools:</strong> Control Tower, LZA, CDK, Config</div>
+            <div class="tags"><ul><li>Landing Zone</li><li>Control Tower</li><li>Organizations</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/05-aws-landing-zone" target="_blank">Explore Project →</a>
+          </div>
+
+          <!-- 06 Infrastructure Automation -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/DevOps/CodePipeline.png" alt="Infra Automation">
+            <h3>Infrastructure Automation Pipeline</h3>
+            <p>Service-Catalog + CodePipeline delivering CIS-hardened VPCs at click.</p>
+            <div class="tools"><strong>Tools:</strong> CDK, Service Catalog, CodePipeline, Config</div>
+            <div class="tags"><ul><li>CDK</li><li>ServiceCatalog</li><li>CodePipeline</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/06-infra-automation" target="_blank">Explore Project →</a>
+          </div>
+
+          <!-- 07 Multi-Cloud Backbone -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Networking/Transit-Gateway.png" alt="Multi-Cloud">
+            <h3>Multi-Cloud Network Backbone</h3>
+            <p>Encrypted, audited AWS ↔ Azure connectivity without VPN appliances.</p>
+            <div class="tools"><strong>Tools:</strong> Transit Gateway, ExpressRoute, MACsec, Aviatrix</div>
+            <div class="tags"><ul><li>TransitGateway</li><li>ExpressRoute</li><li>MACsec</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/07-multicloud-backbone" target="_blank">Explore Project →</a>
+          </div>
+
+          <!-- 08 RAG Context Modelling -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Machine-Learning/Bedrock.png" alt="RAG">
+            <h3>Custom RAG with Context Modelling</h3>
+            <p>Tenant-aware RAG chat-bot citing exact PDF paragraphs via Neo4j graph.</p>
+            <div class="tools"><strong>Tools:</strong> Bedrock, OpenSearch, Lambda, Neo4j</div>
+            <div class="tags"><ul><li>Bedrock</li><li>OpenSearch</li><li>RAG</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/08-rag-context-model" target="_blank">Explore Project →</a>
+          </div>
+
+          <!-- 09 Multi-Cloud Micro-services -->
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/awslabs/aws-icons/main/Architecture/Containers/EKS.png" alt="Micro-services">
+            <h3>Multi-Cloud Micro-services</h3>
+            <p>50 % AWS / 50 % GCP payment-gateway, Istio mesh, &lt;100 ms auth.</p>
+            <div class="tools"><strong>Tools:</strong> EKS, GKE, Istio, Spanner, Global Accelerator</div>
+            <div class="tags"><ul><li>EKS</li><li>GKE</li><li>Istio</li></ul></div>
+            <a class="btn" href="https://github.com/hikmat-art/09-microsvc-multicloud" target="_blank">Explore Project →</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>Built by Hikmat Ullah | Deployed on Vercel</footer>
     </div>
-  </section>
-
-  <footer>Built by Hikmat and HTML | Deployed on Vercel</footer>
+  </div>
 </body>
-
 </html>
-
-
